@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Search Results</h1>
+  
+  <% if (bookings && bookings.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Adults</th>
+          <th>Children</th>
+          <th>Travel Class</th>
+          <th>Departure Date</th>
+          <th>Journey Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bookings.forEach((booking) => { %>
+          <tr>
+            <td><%= booking.from %></td>
+            <td><%= booking.to %></td>
+            <td><%= booking.adults %></td>
+            <td><%= booking.children %></td>
+            <td><%= booking.travelClass %></td>
+            <td><%= booking.departureDate %></td>
+            <td><%= booking.journeyType %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>No bookings found.</p>
+  <% } %>
+</body>
+</html>

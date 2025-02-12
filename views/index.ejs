@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="container">
+    <h1>Travel Booking Forms</h1>
+    <form action="/search" method="POST">
+      <h2>Search for Flights</h2>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="from">From</label>
+      <input type="text" id="from" name="from" required>
+
+      <label for="to">To</label>
+      <input type="text" id="to" name="to" required>
+
+      <label for="adults">Adults</label>
+      <input type="number" id="adults" name="adults" required>
+
+      <label for="children">Children</label>
+      <input type="number" id="children" name="children">
+
+      <label for="travelClass">Travel Class</label>
+      <select id="travelClass" name="travelClass" required>
+        <option value="Economy">Economy</option>
+        <option value="Business">Business</option>
+        <option value="First">First</option>
+      </select>
+
+      <label for="departureDate">Departure On</label>
+      <input type="date" id="departureDate" name="departureDate" required>
+
+      <label for="journeyType">Journey Type</label>
+      <select id="journeyType" name="journeyType" required>
+        <option value="One Way">One Way</option>
+        <option value="Round Trip">Round Trip</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>
